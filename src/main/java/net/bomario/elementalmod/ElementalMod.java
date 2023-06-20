@@ -1,6 +1,7 @@
 package net.bomario.elementalmod;
 
 import com.mojang.logging.LogUtils;
+import net.bomario.elementalmod.item.ModItems;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,17 +18,17 @@ import org.slf4j.Logger;
 public class ElementalMod {
     public static final String MOD_ID = "elementalmod";
     private static final Logger LOGGER = LogUtils.getLogger();
-    public ElementalMod()
-    {
+    public ElementalMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event)
-    {
+    private void commonSetup(final FMLCommonSetupEvent event) {
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
         LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
