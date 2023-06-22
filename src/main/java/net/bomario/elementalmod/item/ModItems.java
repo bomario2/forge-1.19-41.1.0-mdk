@@ -2,10 +2,7 @@ package net.bomario.elementalmod.item;
 
 import net.bomario.elementalmod.ElementalMod;
 import net.bomario.elementalmod.item.custom.WaterTridentItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
