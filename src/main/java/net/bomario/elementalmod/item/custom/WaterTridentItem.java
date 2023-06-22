@@ -30,7 +30,7 @@ public class WaterTridentItem extends Item {
 
 
     public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
-        tooltip.add(Component.literal("Spawns fish if you rightclick!"));
+        tooltip.add(Component.literal("The ultimate water item!"));
 
         super.appendHoverText(stack, worldIn, tooltip, flagIn);
     };

@@ -19,6 +19,7 @@ public class ModItems {
             () -> new WaterTridentItem(new Item.Properties().tab(ModCreativeModeTab.ELEMENTAL_TAB).stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
+
         ITEMS.register(eventBus);
     }
 }
