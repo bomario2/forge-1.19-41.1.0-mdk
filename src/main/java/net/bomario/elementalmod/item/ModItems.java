@@ -1,6 +1,7 @@
 package net.bomario.elementalmod.item;
 
 import net.bomario.elementalmod.ElementalMod;
+import net.bomario.elementalmod.item.custom.WaterTridentItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
@@ -15,7 +16,7 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, ElementalMod.MOD_ID);
 
     public static final RegistryObject<Item> WATER_TRIDENT = ITEMS.register("water_trident",
-            () -> new SwordItem(Tiers.DIAMOND, 10, 5f, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new WaterTridentItem(new Item.Properties().tab(ModCreativeModeTab.ELEMENTAL_TAB).stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
